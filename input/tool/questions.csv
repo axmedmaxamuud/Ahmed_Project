@@ -1,0 +1,102 @@
+type,name,label,relevant,required,constraint,constraint_message,calculation,choice_filter,appearance,hint
+start,start,,,,,,,,,
+end,end,,,,,,,,,
+deviceid,deviceid,,,,,,,,,
+today,today,,,,,,,,,
+begin_group,location_info,Location Information,,,,,,,,
+select_one region,region,In which region does your household reside?,,,,,,,,
+select_one district,district,In which district does your household reside?,,,,,,,,
+select_one yes_no,idp_settlement,Does the household reside an IDP?,,,,,,,,
+end_group,,,,,,,,,,
+begin_group,demographic,Household Information,,,,,,,,
+select_one gender,gender,sex of respondent,,,,,,,,
+integer,age,Age of respondent,,,,,,,,
+select_one yes_no,hh_head,Head of household profile,,,,,,,,
+integer,hohh_income,What is the total income of Head of Household per month? USD,,,,,,,,
+select_one hh_displacement_status,hh_displacement_status,Is the HH displaced as a result of the conflict?,,,,,,,,
+select_multiple hohh_vulnerability_opt,hohh_vulnerability,"Does the HH head have a vulnerability? If yes, what type?",,,,,,,,
+end_group,,,,,,,,,,
+begin_group,wgs,Washington Group Questions,,,,,,,,
+select_one wgq,wgq_seeing,"Do you have difficulty seeing, even if wearing glasses? Would you say… [Read response categories]",,,,,,,,
+select_one wgq,wgq_hearing,"Do you have difficulty hearing, even if using a hearing aid(s)? Would you say… [Read response categories]",,,,,,,,
+select_one wgq,wgq_walking,Do you have difficulty walking or climbing steps? Would you say… [Read response categories],,,,,,,,
+select_one wgq,wgq_remembering,Do you have difficulty remembering or concentrating? Would you say… [Read response categories],,,,,,,,
+select_one wgq,wgq_selfcare,"Do you have difficulty with self-care, such as washing all over or dressing? Would you say… [Read response categories]",,,,,,,,
+select_one wgq,wgq_language,"Using your usual language, do you have difficulty communicating, for example understanding or being understood? Would you say… [Read response categories]",,,,,,,,
+end_group,,,,,,,,,,
+begin_group,fcs,Household Dietary Diversity Score (Combined FCS/FCSN/HDDS),,,,,,,,
+note,FCSStapNote,"How many days over the last 7 days, did most members of your household (50% +) eat the following food items, inside or outside the home?",,,,,,,,
+integer,FCSStap,"Cereals, grains, roots and tubers, such as:",,,. >= 0 and .<=7,,,,,"Rice, pasta, bread, sorghum, millet, maize, potato, yam, cassava, white sweet potato."
+select_one SRf,FCSStap_SRf,What was the main source of food for this food group?,,,,,,,,
+note,HDDSStapNote,Did most of your household eat/consume the following foods yesterday?,,,,,,,,
+select_one Yesno,HDDSStapCer,"Cereals, grains, such as:",,,,,,,,"Rice, pasta, bread, sorghum, millet, maize."
+select_one Yesno,HDDSStapRoot,"Roots and tubers, such as:",,,,,,,,"Potato, yam, cassava, white sweet potato."
+note,FCSPulseNote,"How many days over the last 7 days, did most members of your household (50% +) eat the following food items, inside or outside the home?",,,,,,,,
+integer,FCSPulse,"Pulses/ legumes / nuts, such as:",,,. >= 0 and .<=7,,,,,"Beans, cowpeas, peanuts, lentils, nut, soy, pigeon pea and/or other nuts."
+select_one SRf,FCSPulse_SRf,What was the main source of food for this food group?,,,,,,,,
+note,HDDSPulseNote,Did most of your household eat/consume the following foods yesterday?,,,,,,,,
+select_one Yesno,HDDSPulse,"Pulses/legumes/nuts, such as:",,,,,,,,"Beans, cowpeas, peanuts, lentils, nut, soy, pigeon pea and/or other nuts"
+note,FCSDairyNote,"How many days over the last 7 days, did most members of your household (50% +) eat the following food items, inside or outside the home?",,,,,,,,
+integer,FCSDairy,"Milk and other dairy products, such as:",,,. >= 0 and .<=7,,,,,"Fresh milk/sour, yogurt, cheese, other dairy products (Exclude margarine/butter or small amounts of milk for tea/coffee)."
+select_one SRf,FCSDairy_SRf,What was the main source of food for this food group?,,,,,,,,
+note,HDDSDairyNote,Did most of your household eat/consume the following foods yesterday?,,,,,,,,
+select_one Yesno,HDDSDairy,"Milk and other dairy products, such as:",,,,,,,,"Fresh milk/sour, yogurt, cheese, other dairy products (Exclude margarine/butter or small amounts of milk for tea/coffee)"
+note,FCSPrNote,"How many days over the last 7 days, did most members of your household (50% +) eat the following food items, inside or outside the home?",,,,,,,,
+integer,FCSPr,"Meat, fish and eggs, such as:",,,. >= 0 and .<=7,,,,,"Goat, beef, chicken, pork, blood, fish, including canned tuna, escargot, and/or other seafood, eggs (meat and fish consumed in large quantities and not as a condiment)."
+select_one SRf,FCSPr_SRf,What was the main source of food for this food group?,,,,,,,,
+note,FCSNPrNote,"How many days over the last 7 days, did most members of your household (50% +) eat the following food items, inside or outside the home?",,,,,,,,
+integer,FCSNPrMeatF,"Flesh meat, such as:",,,. >= 0 and . <= ${FCSPr},,,,,"Beef, pork, lamb, goat, rabbit, chicken, duck, other birds, insects."
+note,HDDSMeatFNote,Did most of your household eat/consume the following foods yesterday?,,,,,,,,
+select_one Yesno,HDDSPrMeatF,"Flesh meat, such as:",,,,,,,,"Beef, pork, lamb, goat, rabbit, chicken, duck, other birds, insects."
+note,FCSNMeatONote,"How many days over the last 7 days, did most members of your household (50% +) eat the following food items, inside or outside the home?",,,,,,,,
+integer,FCSNPrMeatO,"Organ meat, such as:",,,. >= 0 and . <= ${FCSPr},,,,,"Liver, kidney, heart and/or other organ meats."
+note,HDDSMeatONote,Did most of your household eat/consume the following foods yesterday?,,,,,,,,
+select_one Yesno,HDDSPrMeatO,"Organ meat, such as:",,,,,,,,"Liver, kidney, heart and/or other organ meats."
+note,FCSNFishNote,"How many days over the last 7 days, did most members of your household (50% +) eat the following food items, inside or outside the home?",,,,,,,,
+integer,FCSNPrFish,"Fish/shellfish, such as:",,,. >= 0 and . <= ${FCSPr},,,,,"Fish, including canned tuna, escargot, and / or other seafood (fish in large quantities and not as a condiment)."
+note,HDDSFishNote,Did most of your household eat/consume the following foods yesterday?,,,,,,,,
+select_one Yesno,HDDSPrFish,"Fish/shellfish, such as:",,,,,,,,"Fish, including canned tuna, escargot, and / or other seafood (fish in large quantities and not as a condiment)."
+note,FCSNEggsNote,"How many days over the last 7 days, did most members of your household (50% +) eat the following food items, inside or outside the home?",,,,,,,,
+integer,FCSNPrEggs,Eggs:,,,. >= 0 and . <= ${FCSPr},,,,,
+note,HDDSEggsNote,Did most of your household eat/consume the following foods yesterday?,,,,,,,,
+select_one Yesno,HDDSPrEggs,Eggs:,,,,,,,,
+note,FCSVegNote,"How many days over the last 7 days, did most members of your household (50% +) eat the following food items, inside or outside the home?",,,,,,,,
+integer,FCSVeg,"Vegetables and leaves, such as:",,,. >= 0 and .<=7,,,,,"Spinach, onion, tomatoes, carrots, peppers, green beans, lettuce, etc.."
+select_one SRf,FCSVeg_SRf,What was the main source of food for this food group?,,,,,,,,
+note,FCSNVegNote,"How many days over the last 7 days, did most members of your household (50% +) eat the following food items, inside or outside the home?",,,,,,,,
+integer,FCSNVegOrg,"Orange vegetables (vegetables rich in Vitamin A), such as:",,,. >= 0 and . <= ${FCSVeg},,,,,"Carrot, red pepper, pumpkin, orange sweet potatoes, etc.."
+integer,FCSNVegGre,"Green leafy vegetables, such as:",,,. >= 0 and . <= ${FCSVeg},,,,,"Spinach, broccoli, amaranth and / or other dark green leaves, cassava leaves."
+note,HDDSVegNote,Did most of your household eat/consume the following foods yesterday?,,,,,,,,
+select_one Yesno,HDDSVeg,"Vegetables and leaves, such as:",,,,,,,,"Spinach, onion, tomatoes, carrots, peppers, green beans, lettuce, etc.."
+note,FCSFruitNote,"How many days over the last 7 days, did most members of your household (50% +) eat the following food items, inside or outside the home?",,,,,,,,
+integer,FCSFruit,"Fruits, such as:",,,. >= 0 and .<=7,,,,,"Banana, apple, lemon, mango, papaya, apricot, peach, etc.."
+select_one SRf,FCSFruit_SRf,What was the main source of food for this food group?,,,,,,,,
+note,FCSNFruitNote,"How many days over the last 7 days, did most members of your household (50% +) eat the following food items, inside or outside the home?",,,,,,,,
+integer,FCSNFruiOrg,"Orange fruits (Fruits rich in Vitamin A), such as:",,,.>=0 and .<=${FCSFruit},,,,,"Mango, papaya, apricot, peach. [Excluding oranges]"
+note,HDDSFruitNote,Did most of your household eat/consume the following foods yesterday?,,,,,,,,
+select_one Yesno,HDDSFruit,"Fruits, such as:",,,,,,,,"Banana, apple, lemon, mango, papaya, apricot, peach, etc.."
+note,FCSFatNote,"How many days over the last 7 days, did most members of your household (50% +) eat the following food items, inside or outside the home?",,,,,,,,
+integer,FCSFat,"Oil/fat/butter, such as:",,,. >= 0 and .<=7,,,,,"Vegetable oil, palm oil, shea butter, margarine, other fats/oil."
+select_one SRf,FCSFat_SRf,What was the main source of food for this food group?,,,,,,,,
+note,HDDSFatNote,Did most of your household eat/consume the following foods yesterday?,,,,,,,,
+select_one Yesno,HDDSFat,"Oil/fat/butter, such as:",,,,,,,,"Vegetable oil, palm oil, shea butter, margarine, other fats/oil."
+note,FCSSugarNote,"How many days over the last 7 days, did most members of your household (50% +) eat the following food items, inside or outside the home?",,,,,,,,
+integer,FCSSugar,"Sugar, or sweet, such as:",,,. >= 0 and .<=7,,,,,"Sugar, honey, jam, cakes, candy, cookies, pastries, cakes and other sweet (sugary drinks)."
+select_one SRf,FCSSugar_SRf,What was the main source of food for this food group?,,,,,,,,
+note,HDDSSugarNote,Did most of your household eat/consume the following foods yesterday?,,,,,,,,
+select_one Yesno,HDDSSugar,"Sugar, or sweet, such as:",,,,,,,,"Sugar, honey, jam, cakes, candy, cookies, pastries, cakes and other sweet (sugary drinks)."
+note,FCSCondNote,"How many days over the last 7 days, did most members of your household (50% +) eat the following food items, inside or outside the home?",,,,,,,,
+integer,FCSCond,"Condiments/Spices, such as:",,,. >= 0 and .<=7,,,,,"Tea, coffee/cocoa, salt, garlic, spices, yeast/baking powder, lanwin, tomato/sauce, meat or fish as a condiment, condiments including small amount of milk/tea coffee."
+select_one SRf,FCSCond_SRf,What was the main source of food for this food group?,,,,,,,,
+note,HDDSCondNote,Did most of your household eat/consume the following foods yesterday?,,,,,,,,
+select_one Yesno,HDDSCond,"Condiments/Spices, such as:",,,,,,,,"Tea, coffee/cocoa, salt, garlic, spices, yeast/baking powder, lanwin, tomato/sauce, meat or fish as a condiment, condiments including small amount of milk/tea coffee."
+end_group,,,,,,,,,,
+begin_group,rcsi,Reduced Coping Strategies (rCSI),,,,,,,,
+note,rCSINote,"Now I will ask you about the number of days, in the last 7 days, that your household may have done some of the following actions to cope with lack of food or money to buy food.",,,,,,,,
+integer,rCSILessQlty,"During the last 7 days, were there days (and, if so, how many) when your household had to rely on less preferred and less expensive food  to cope with a lack of food or money to buy it?",,,,,,,,
+integer,rCSIBorrow,"During the last 7 days, were there days (and, if so, how many) when your household had to borrow food or rely on help from a relative or friend to cope with a lack of food or money to buy it?",,,,,,,,
+integer,rCSIMealSize,"During the last 7 days, were there days (and, if so, how many) when your household had to limit portion size of meals at meal times to cope with a lack of food or money to buy it?",,,,,,,,
+integer,rCSIMealAdult,"During the last 7 days, were there days (and, if so, how many) when your household had to restrict consumption by adults in order for small children to eat to cope with a lack of food or money to buy it?",,,,,,,,
+integer,rCSIMealNb,"During the last 7 days, were there days (and, if so, how many) when your household had to reduce number of meals eaten in a day to cope with a lack of food or money to buy it?",,,,,,,,
+end_group,,,,,,,,,,
+begin_group,lhcsi,Livelihood Coping Strategies (LCS-FS),,,,,,,,

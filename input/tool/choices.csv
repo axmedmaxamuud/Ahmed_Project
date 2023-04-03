@@ -1,0 +1,173 @@
+list_name,name,label
+gender,male,Male
+gender,female,Female
+,,
+yes_no,yes,Yes
+yes_no,no,No
+,,
+hohh_vulnerability_opt,no,No
+hohh_vulnerability_opt,older_person,Older person (60+)
+hohh_vulnerability_opt,disability_not_including_chronic_illness,Disability (not including chronic illness)
+hohh_vulnerability_opt,unemployed,Unemployed
+hohh_vulnerability_opt,veteran_of_war_ato,Veteran of war/ATO
+hohh_vulnerability_opt,single_parent,Single parent
+hohh_vulnerability_opt,family_with_3_or_more_children,Family with 3 or more children
+hohh_vulnerability_opt,family_with_foster_children,Family with foster children
+hohh_vulnerability_opt,chronic_illness,Chronic illness which affects quality of life
+hohh_vulnerability_opt,other_specify,Other (specify)
+,,
+hh_displacement_status,no,No
+hh_displacement_status,displaced_and_idp_status,Displaced and IDP status
+hh_displacement_status,displaced_but_does_not_have_idp_status,Displaced but does not have IDP status
+hh_displacement_status,not_displaced_but_has_idp_status,Not displaced but has IDP status
+hh_displacement_status,used_to_be_displaced_but_returned_and_has_a_status_of_idp,Used to be displaced but returned and has a status of IDP
+hh_displacement_status,used_to_be_displaced_but_returned_and_has_no_status_of_idp,Used to be displaced but returned and has NO status of IDP
+hh_displacement_status,partially_displaced_and_have_idp_status,Partially displaced and have IDP status
+hh_displacement_status,partially_displaced_and_dont_have_idp_status,Partially displaced and don't have IDP status
+hh_displacement_status,refuse_to_answer,Refuse to answer
+,,
+wgq,no_difficulty,No difficulty
+wgq,some_difficulty,Some difficulty
+wgq,lot_difficulty,A lot of difficulty
+wgq,canot_do_all,Cannot do at all
+wgq,refused,Refused
+wgq,dnk,Don't know
+,,
+Yesno,0,No
+Yesno,1,Yes
+,,
+SRf,100,Own production
+SRf,1000,Food aid
+SRf,1001,Food aid from WFP
+SRf,1002,Food aid from civil society/ NGO/ government
+SRf,1003,Food for assets (community works for food)
+SRf,101,Livestock
+SRf,102,Gardening
+SRf,200,Hunting/fishing
+SRf,300,Gathering
+SRf,400,Loaned/borrowed
+SRf,500,Purchased
+SRf,501,From local shop/market
+SRf,502,From roadside vendor
+SRf,503,From central shop
+SRf,504,From central market
+SRf,600,Credit
+SRf,700,Begging
+SRf,800,Exchange for labour or items
+SRf,801,Work for food
+SRf,802,Barter/trade of goods/services
+SRf,900,Gifts from family/friends
+SRf,999,Other
+,,
+region,awdal,Awdal
+region,bakool,Bakool
+region,banadir,Banadir
+region,bari,Bari
+region,bay,Bay
+region,galgaduud,Galgaduud
+region,gedo,Gedo
+region,hiraan,Hiraan
+region,lower_juba,Lower Juba
+region,lower_shabelle,Lower Shabelle
+region,middle_juba,Middle Juba
+region,middle_shabelle,Middle Shabelle
+region,mudug,Mudug
+region,nugaal,Nugaal
+region,sanaag,Sanaag
+region,sool,Sool
+region,togdheer,Togdheer
+region,woqooyi_galbeed,Woqooyi Galbeed
+,,
+district,baki,Baki
+district,borama,Borama
+district,lughaye,Lughaye
+district,zeylac,Zeylac
+district,ceel_barde,Ceel Barde
+district,rab_dhuure,Rab Dhuure
+district,tayeeglow,Tayeeglow
+district,waajid,Waajid
+district,xudur,Xudur
+district,boondheere,Mogadishu_Boondheere
+district,abdulaziz,Mogadishu_Cabdulcasiis
+district,daynile,Mogadishu_Daynile
+district,dharkenley,Mogadishu_Dharkenley
+district,hawl_wadaag,Mogadishu_Hawl Wadaag
+district,heliwa,Mogadishu_Heliwa
+district,hodan,Mogadishu_Hodan
+district,kahda,Mogadishu_Kahda
+district,karaan,Mogadishu_Karaan
+district,shangaani,Mogadishu_Shangaani
+district,shibis,Mogadishu_Shibis
+district,waaberi,Mogadishu_Waaberi
+district,wadajir,Mogadishu_Wadajir
+district,wardhiigleey,Mogadishu_Wardhiigleey
+district,hamar_jaab_jab,Mogadishu_Xamar Jabjab
+district,hamar_weyne,Mogadishu_Xamar Weyne
+district,yaaqshiid,Mogadishu_Yaaqshiid
+district,bandarbayla,Bandarbayla
+district,bossaso,Bossaso
+district,caluula,Caluula
+district,iskushuban,Iskushuban
+district,qandala,Qandala
+district,qardho,Qardho
+district,baidoa,Baidoa
+district,buur_hakaba,Buur Hakaba
+district,diinsoor,Diinsoor
+district,qansax_dheere,Qansax Dheere
+district,cabudwaaq,Cabudwaaq
+district,cadaado,Cadaado
+district,ceel_buur,Ceel Buur
+district,ceel_dheer,Ceel Dheer
+district,dhuusamarreeb,Dhuusamarreeb
+district,baardheere,Baardheere
+district,belet_xaawo,Belet Xaawo
+district,ceel_waaq,Ceel Waaq
+district,doolow,Doolow
+district,garbahaarey,Garbahaarey
+district,luuq,Luuq
+district,belet_weyne,Belet Weyne
+district,bulo_burto,Bulo Burto
+district,jalalaqsi,Jalalaqsi
+district,afmadow,Afmadow
+district,badhaadhe,Badhaadhe
+district,jamaame,Jamaame
+district,kismayo,Kismayo
+district,afgooye,Afgooye
+district,baraawe,Baraawe
+district,kurtunwaarey,Kurtunwaarey
+district,marka,Marka
+district,qoryooley,Qoryooley
+district,sablaale,Sablaale
+district,wanla_weyn,Wanla Weyn
+district,buaale,Buaale
+district,jilib,Jilib
+district,sakow,Sakow
+district,aden_yabaal,Aden Yabaal
+district,balcad,Balcad
+district,cadale,Cadale
+district,jowhar,Jowhar
+district,galdogob,Galdogob
+district,hobyo,Hobyo
+district,jariiban,Jariiban
+district,xarardheere,Xarardheere
+district,burtinle,Burtinle
+district,eyl,Eyl
+district,garowe,Garowe
+district,ceel_afweyn,Ceel Afweyn
+district,ceerigaabo,Ceerigaabo
+district,laasqoray,Laasqoray
+district,caynabo,Caynabo
+district,laas_caanood,Laas Caanood
+district,taleex,Taleex
+district,xudun,Xudun
+district,burco,Burco
+district,buuhoodle,Buuhoodle
+district,owdweyne,Owdweyne
+district,sheikh,Sheikh
+district,berbera,Berbera
+district,gebiley,Gebiley
+district,hargeysa,Hargeysa
+district,mataban,mataban
+district,gaalkacyo_north,gaalkacyo_north
+district,gaalkacyo_south,gaalkacyo_south
+district,badhan,badhan
