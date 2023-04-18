@@ -19,4 +19,4 @@ choices <- read.csv("input/tool/choices.csv",
 data <- xlsform_fill(questions, choices, n = 500)
 
 # export data
-write.xlsx(data, paste0("input/data/survey_data_",today,".XLSX"))
+#write.xlsx(data, paste0("input/data/survey_data_",today,".XLSX"))
