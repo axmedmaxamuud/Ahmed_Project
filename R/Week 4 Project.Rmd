@@ -1,0 +1,25 @@
+---
+title: "Week 4 - Data Viz fundamental"
+author: "Ahmed"
+date: "2023-04-18"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE, comment = FALSE)
+```
+
+```{r}
+# load packages
+library(tidyverse)
+library(ggplot2)
+library(readxl)
+library(openxlsx)
+
+# load survey data  
+
+
+
+
+```
+
