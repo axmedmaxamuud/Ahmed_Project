@@ -52,4 +52,76 @@ ggsave(filename = "output/charts/gender_bar_chart.pdf",
        height = 8,
        width = 11)
 
+### Table demonistration
+
+# Install and load the necessary packages
+install.packages("gt")
+library(gt)
+
+# Sample data
+data <- data.frame(
+  gender = c("Male", "Female", "Male", "Male", "Female", "Female", "Male", "Female"),
+  activity = c("Walking", "Running", "Walking", "Running", "Walking", "Running", "Walking", "Running"),
+  food_security = c(5, 6, 4, 7, 3, 8, 5, 6)
+)
+
+# Create an empty table
+tbl <- gt()
+
+# Group the data and calculate the sum of food security scores
+tbl <- data %>%
+  group_by(gender, activity) %>%
+  summarise(food_security_sum = sum(food_security))
+
+# Categorize food security scores
+tbl$food_security_category <- cut(tbl$food_security_sum, breaks = c(0, 10, 15, Inf), labels = c("Low", "Medium", "High"), right = FALSE)
+
+# Add the grouped data to the table
+tbl <- gt(tbl) %>%
+  tab_header(title = "Food Security Scores by Gender and Activity") %>%
+  cols_label(gender = "Gender", activity = "Activity", food_security_sum = "Food Security Score", food_security_category = "Category")
+
+# Print the final table
+print(tbl)
+
+# version with %
+
+# Install and load the necessary packages
+install.packages("gt")
+library(gt)
+
+# Sample data
+data <- data.frame(
+  gender = c("Male", "Female", "Male", "Male", "Female", "Female", "Male", "Female"),
+  activity = c("Walking", "Running", "Walking", "Running", "Walking", "Running", "Walking", "Running"),
+  food_security = c(5, 6, 4, 7, 3, 8, 5, 6)
+)
+
+# Create an empty table
+tbl <- gt()
+
+# Group the data and calculate the proportions of food security scores
+tbl <- data %>%
+  group_by(gender, activity) %>%
+  summarise(count = n(), food_security_prop = sum(food_security) / sum(count) * 100)
+
+# Add the grouped data to the table
+tbl <- gt(tbl) %>%
+  tab_header(title = "Food Security Proportions by Gender and Activity") %>%
+  cols_label(gender = "Gender", activity = "Activity", count = "Count", food_security_prop = "Proportion") %>%
+  fmt_percent(columns = "food_security_prop", decimals = 2)
+
+# Print the final table
+print(tbl)
+
+
+
+
+
+
+
+
+
+
+
 
